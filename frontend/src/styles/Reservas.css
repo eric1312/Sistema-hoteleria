@@ -1,0 +1,199 @@
+/* Estilo para el formulario */
+#form-reservas {
+  background-color: #b0b7bf;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.603);
+  max-width: 600px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  grid-template-rows: auto;
+}
+
+/* Título centrado y ocupa las dos columnas */
+#form-reservas h2 {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Contenedor de cada campo del formulario */
+#form-reservas div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8rem;
+}
+
+/* Estilo de las etiquetas */
+#form-reservas label {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+/* El campo de Estado Reserva ocupa ambas columnas */
+#form-reservas select {
+  grid-column: span 2;
+}
+
+
+#form-reservas .button-container {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Estilo para el botón de guardar */
+#form-reservas button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  background-color: #06b348;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#form-reservas button:hover {
+  background-color: #e0a800;
+}
+
+/* Estilo para el botón de cancelar */
+.cancel-button {
+  background-color: #bd2130;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #5a6268;
+}
+
+/* Ajustes de los inputs y select */
+#form-reservas select,
+#form-reservas input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+#form-reservas select:focus,
+#form-reservas input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Contenedor de la tabla */
+.table-responsive {
+  overflow-x: auto;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Estilo general para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  vertical-align: middle;
+  border: 1px solid #dee2e6;
+}
+
+/* Fondo blanco para el encabezado */
+table thead tr {
+  background-color: #ffffff;
+}
+
+/* Fondo blanco para las filas del cuerpo */
+table tbody tr {
+  background-color: #ffffff;
+}
+
+/* Fondo alternado para las filas del cuerpo (opcional) */
+table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+/* Estilo general para pantallas pequeñas */
+@media scren and (min-width: 768px) and (max-width: 300px) {
+
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 80% !important;
+  }
+
+
+  #form-reservas {
+    grid-template-columns: 1fr;
+  }
+
+  #form-reservas .button-container {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  table {
+    display: block;
+  }
+
+  thead {
+    display: none;
+    
+  }
+
+  tbody tr {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  tbody tr td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #2c3e50;
+    flex: 0 0 40%;
+    text-align: left;
+  }
+
+  tbody tr td:last-child {
+    justify-content: center;
+  }
+
+}
+

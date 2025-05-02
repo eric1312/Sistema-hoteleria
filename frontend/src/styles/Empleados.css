@@ -1,0 +1,161 @@
+#form-employees {
+  background-color: #b0b7bf;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.603);
+  max-width: 600px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Centramos el título en una fila separada */
+#form-employees h2 {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Ajustamos los div contenedores para las etiquetas y los inputs */
+#form-employees div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Email ocupa ambas columnas */
+#form-employees .email-container {
+  grid-column: span 2;
+}
+
+/* Botón ocupa ambas columnas y está centrado */
+#form-employees .button-container {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos de inputs */
+#form-employees input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+#form-employees input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Botón */
+#form-employees button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  background-color: #06b348;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#form-employees button:hover {
+  background-color: #e0a800;
+}
+
+
+/* Contenedor de la tabla */
+.table-responsive {
+  overflow-x: auto;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Tabla base */
+.table {
+
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  vertical-align: middle;
+  color: #2c3e50;
+  border: 1px solid #dee2e6;
+  /* Añadimos bordes */
+}
+
+table thead tr {
+  background-color: #f8f9fa;
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+/* Estilos responsivos */
+
+  
+@media  screen and (max-width: 1024px) {
+
+  .table tbody {
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+   
+  }
+
+  tbody tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+
+  tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    width: 100%;
+   
+  }
+
+  tbody tr td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #2c3e50;
+    flex: 0 0 40%;
+    text-align: left;
+  }
+
+  tbody tr td:last-child {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .table {
+    width: 100vw;
+   
+  }  
+  
+  }
