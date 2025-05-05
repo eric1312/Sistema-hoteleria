@@ -10,21 +10,6 @@ Este proyecto es un **Sistema de Gestión Hotelera** diseñado para administrar 
 - Registro de pagos.
 - Organizacion sobre ocupación de empleados.
 
-
-
-## Instalación
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/Psiquee/Sistema-Hotel.git
-
-## Instalación
-Para ejecutar el proyecto localmente, sigue estos pasos:
-1. Clona este repositorio.
-   ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   ```
-
-
 ## .env
 Deberás crear en la carpeta frontend un archivo de conexion con el nombre **".env"** donde incluirás las siguientes variables con tu informacion local o url de tu api desplegada:
 ```javascript
